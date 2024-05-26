@@ -15,7 +15,8 @@ public interface UtilEntityRepository extends CrudRepository<UtilEntity, Integer
    @Query(value = "SELECT TEST.MY_FUNCTION(:personName, :personAge) FROM DUAL", nativeQuery = true)
    String callFunctionWithAliases(
      @Param("personName") String  name,
-     @Param("personAge" ) Integer age,
+     @Param("personAge" ) Integer age
   );
 
 }
+
